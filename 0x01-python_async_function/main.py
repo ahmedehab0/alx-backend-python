@@ -1,9 +1,8 @@
 #!/usr/bin/env python3
 
-import asyncio
+measure_time = __import__('2-measure_runtime').measure_time
 
-wait_random = __import__('0-basic_async_syntax').wait_random
+n = 5
+max_delay = 9
 
-print(asyncio.run(wait_random()))
-print(asyncio.run(wait_random(5)))
-print(asyncio.run(wait_random(15)))
+print(measure_time(n, max_delay))
